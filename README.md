@@ -11,11 +11,11 @@ The purpose of this project is to review production data for insights into the m
 
 **Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
 
-In the summary output, the results show that the intercept, vehicle length, and ground clearance are statistically likely to provide non-random amount of variance to mpg values, as the Pr(>|t|) values are less than 0.05. Given that the intercept is statistically significant, there may be other variables or factors that contribute to the mpg variation that were not included in the data. 
+In the summary output, the results show that the intercept, vehicle length, and ground clearance are statistically likely to provide non-random amount of variance to mpg values, as the Pr(>|t|) values are less than 0.05%. Given that the intercept is statistically significant, there may be other variables or factors that contribute to the mpg variation that were not included in the data. 
 
 **Is the slope of the linear model considered to be zero? Why or why not?**
 
-Because the p-value of the analysis is 5.35e-11, which is less than a significance level of 0.05, there is sufficient evidence to reject the null hypothesis, and therefore, the slope of the linear model is not zero.
+Because the p-value of the analysis is 5.35e-11, which is less than a significance level of 0.05%, there is sufficient evidence to reject the null hypothesis, and therefore, the slope of the linear model is not zero.
 
 **Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?**
 
@@ -30,3 +30,18 @@ Because the regression analysis provides a r-squared value of 0.7149 and the p-v
 **The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?**
 
 In total, the manufacturing data meets this specification. However, lot 3 does not meet this specification. The variance for lot 3 is 170.286, which shows that there is more variance in PSI values in lot 3. The mean for lot 3 is also less than the two means for lot 1 and 2, illustrating lot 3 has vehicles with low PSIs. 
+
+## T-Tests on Suspension Coils
+
+![d3_lot1_ttest](/images/d3_lot1_ttest.png)
+The p-value 1.568e-11 is less than the significance level of 0.05%, therefore there is sufficient evidence to reject the null hypothesis. The mean of the lot 1 PSI values and the population mean are statistically different. 
+
+![d3_lot2_ttest](/images/d3_lot2_ttest.png)
+The p-value 0.0005911 is less than the significance level of 0.05%, therefore there is sufficient evidence to reject the null hypothesis. The mean of the lot 2 PSI values and the population mean are statistically different. 
+
+![d3_lot3_ttest](/images/d3_lot3_ttest.png)
+The p-value 0.1589 is greater than the significance level of 0.05%, therefore there is not sufficient evidence to reject the null hypothesis. The mean of the lot 3 PSI values and the population mean are statistically similar. 
+
+## Study Design: MechaCar vs Competition
+
+In a statistical study to measure MechaCar performance against competition, metrics should include safety ratings and fuel efficiency (mpg).
